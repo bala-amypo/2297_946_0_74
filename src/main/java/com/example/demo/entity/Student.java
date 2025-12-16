@@ -20,4 +20,5 @@ public class student{
         this.name=name;
 
     }
+    public string get 
 }
