@@ -8,5 +8,16 @@ public class student{
         return id;
 
     }
-    public void set Id 
+    public void set Id (Long Id){
+        this.Id=Id;
+
+    }
+    public string get name (){
+        return name;
+
+    }
+    public void set name (string name){
+        this.name=name;
+
+    }
 }
