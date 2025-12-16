@@ -8,15 +8,15 @@ public class student{
         return id;
 
     }
-    public void setId (Long Id){
+    public void setId(Long Id){
         this.id=id;
 
     }
-    public string getName (){
+    public string getName(){
         return name;
 
     }
-    public void setName (string name){
+    public void setName(string name){
         this.name=name;
 
     }
@@ -24,10 +24,17 @@ public class student{
         return email;
 
     }
-    public void setEmail (string email){
+    public void setEmail(string email){
         this.email=email;
 
     }
-    public f
+    public float getCgpa(){
+        return cgpa;
+
+    }
+    public void setCgpa(float cgpa){
+        this.cgpa=cgpa;
+        
+    }
 
 }
