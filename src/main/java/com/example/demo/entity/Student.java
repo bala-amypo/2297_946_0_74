@@ -8,17 +8,26 @@ public class student{
         return id;
 
     }
-    public void set Id (Long Id){
-        this.Id=Id;
+    public void setId (Long Id){
+        this.id=id;
 
     }
-    public string get name (){
+    public string getName (){
         return name;
 
     }
-    public void set name (string name){
+    public void setName (string name){
         this.name=name;
 
     }
-    public string get 
+    public string getEmail(){
+        return email;
+
+    }
+    public void setEmail (string email){
+        this.email=email;
+
+    }
+    public f
+
 }
