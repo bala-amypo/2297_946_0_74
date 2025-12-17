@@ -1,16 +1,28 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import java.time.LocalDate;
 
 @Entity
-// @Table(name = "student")
+@Table(name = "student")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String email;
+
+    // Constructors
+    public Student() {
+    }
+
+    public Student(Long id, String name, String email, LocalDate dob, float cgpa) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
 
     // Getters & Setters
     public Long getId() {
@@ -34,18 +46,6 @@ public class Student {
     }
 
     public void setEmail(String email) {
-        this.email = email;
-      }
-
-
-    // Constructors
-    public Student() {
-    }
-
-    public Student(Long id, String name, String email, LocalDate dob, float cgpa) {
-        this.id = id;
-        this.name = name;
         this.email = email;
     }
-
 }
