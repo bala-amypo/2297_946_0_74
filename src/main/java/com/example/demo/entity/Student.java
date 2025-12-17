@@ -1,40 +1,51 @@
-package com.example.demo.entity
-public class student{
+package com.example.demo.entity;
+
+import jakarta.persistence.*;
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "student")
+public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private string name;
-    private string email;
-    private float cgpa;
-    public Long get Id (){
+
+    private String name;
+    private String email;
+
+    // Constructors
+    public Student() {
+    }
+
+    public Student(Long id, String name, String email, LocalDate dob, float cgpa) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
+    // Getters & Setters
+    public Long getId() {
         return id;
-
     }
-    public void setId(Long Id){
-        this.id=id;
 
+    public void setId(Long id) {
+        this.id = id;
     }
-    public string getName(){
+
+    public String getName() {
         return name;
-
     }
-    public void setName(string name){
-        this.name=name;
 
+    public void setName(String name) {
+        this.name = name;
     }
-    public string getEmail(){
+
+    public String getEmail() {
         return email;
-
-    }
-    public void setEmail(string email){
-        this.email=email;
-
-    }
-    public float getCgpa(){
-        return cgpa;
-
-    }
-    public void setCgpa(float cgpa){
-        this.cgpa=cgpa;
-        
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
